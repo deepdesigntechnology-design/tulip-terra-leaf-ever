@@ -347,7 +347,7 @@ export function Brochure() {
 
         <section id="golden" className="spread space-y-8 py-10">
           <SectionHead
-            kicker="فصل ۲ — مبانی هنرهای تجسمی"
+            kicker="آموزه اختصاصی مؤلف — نقاط طلایی"
             title="نقاط طلایی کادر و Super Gold Point"
             body="هر ضلع با دو نشانه به سه قسمت مساوی تقسیم می‌شود. خطوط فرضی به نقطه متناظر ضلع روبرو وصل می‌شوند. تلاقی، چهار نقطه طلایی است. شمال‌شرقی‌ترین نقطه Super Gold Point نام دارد."
           />
@@ -444,7 +444,7 @@ export function Brochure() {
 
         <section id="leather" className="spread space-y-8 py-10">
           <SectionHead
-            kicker="فصل ۳ — شناخت چرم"
+            kicker="فصل ۲ — شناخت چرم"
             title="گروه دو، ماده اصلی است"
             body="گروه یک (میشین، آستر، نبوک، رویه، کراست) لطیف است. گروه دو — کفی، زیره و کروپون از گاو و شتر — پایه صنعت نوین معرق چرم است."
           />
@@ -494,7 +494,7 @@ export function Brochure() {
 
         <section id="process" className="spread space-y-8 py-10">
           <SectionHead
-            kicker="فصل ۶ تا ۹ — زنجیره اجرایی"
+            kicker="فصل‌های ۶ تا ۸ — زنجیره اجرایی"
             title="سیزده مرحله که جابه‌جا نمی‌شوند"
             body="کیفیت نهایی فقط به نقش وابسته نیست؛ به ترتیب عملیات وابسته است. هر مرحله شرط مرحله بعد است."
           />
@@ -547,7 +547,7 @@ export function Brochure() {
 
         <section id="finish" className="spread space-y-8 py-10">
           <SectionHead
-            kicker="فصل ۸ و ۹ — رنگ، خال، روسازی"
+            kicker="فصل ۷ — تثبیت، رنگ‌آمیزی و روسازی"
             title="رنگ مخصوص، خال طلایی، پوشش نهایی"
             body="رنگ‌آمیزی پس از خشکی کامل است. خال‌زنی مرحله مستقل پیش از روسازی است. روغن‌دهی پس از رنگ از کتاب حذف شده."
           />
