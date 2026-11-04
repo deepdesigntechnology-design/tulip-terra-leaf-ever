@@ -45,7 +45,7 @@ export function GoldenPointsDiagram() {
       <figcaption className="mt-3 text-sm leading-7 text-muted">
         هر ضلع با دو نشانه به سه قسمت مساوی تقسیم می‌شود. تلاقی خطوط فرضی، چهار نقطه طلایی است.
         شمال‌شرقی‌ترین نقطه{" "}
-        <strong className="text-ink">Super Gold Point</strong> نام دارد — مهم‌ترین توانایی مبانی هنرهای تجسمی.
+        <strong className="text-ink">Super Gold Point</strong> نام دارد؛ آموزه‌ای اختصاصی در روش طراحی کادر این صنعت.
         {hover ? (
           <span className="mt-1 block text-leather">
             {points.find((p) => p.id === hover)?.label}
@@ -260,19 +260,18 @@ export function ColorRecipeDiagram() {
 
 export function ProcessFlow({ active, onSelect }: { active: number; onSelect: (n: number) => void }) {
   const steps = [
-    { n: 1, t: "آماده‌سازی پایه‌کار", d: "پاک‌سازی، سمباده، رفع چربی", c: "prep" },
-    { n: 2, t: "چسب‌کاری یکنواخت", d: "چسب آهن ۸۸۸۸ + مکث ۱۰ دقیقه", c: "prep" },
-    { n: 3, t: "اجرای اولیه و مونتاژ", d: "نوارکشی + موتیف + بافت یا پیچ", c: "prep" },
-    { n: 4, t: "قوام‌آوری اولیه", d: "مشته‌زنی پس از نصب هر قطعه", c: "mash" },
-    { n: 5, t: "تکمیل کامل معرق", d: "کنترل درزها و جفت‌کاری", c: "prep" },
-    { n: 6, t: "اعمال رزین زیرکار", d: "چسب چوب + آب نسبت ۱ به ۶", c: "resin" },
-    { n: 7, t: "قوام‌آوری نهایی (دونم)", d: "مشته‌زنی آرام نیمه‌خشک", c: "mash" },
-    { n: 8, t: "خشک‌شدن کامل", d: "خروج رطوبت رزین", c: "dry" },
-    { n: 9, t: "رنگ‌آمیزی تخصصی پرداز", d: "جوهر پایه تینر + سایه‌پاش", c: "color" },
-    { n: 10, t: "خشک‌شدن رنگ", d: "تثبیت جوهر روی رخ چرم", c: "dry" },
-    { n: 11, t: "خال‌زنی / خال طلایی", d: "خمیر دورگیر طلایی ویترای", c: "gold" },
-    { n: 12, t: "خشک‌شدن خال‌ها", d: "تثبیت کامل خمیر ویترای", c: "dry" },
-    { n: 13, t: "روسازی نهایی", d: "کیلر سلولزی / اتومبیلی", c: "finish" },
+    { n: 1, t: "آماده‌سازی پایه‌کار", d: "پاک‌سازی، هموارسازی و بررسی پذیرش چسب", c: "prep" },
+    { n: 2, t: "چسب‌کاری سطوح تماس", d: "آماده‌سازی هر دو سطح و اتصال در زمان مناسب", c: "prep" },
+    { n: 3, t: "اجرای قطعات و موتیف‌ها", d: "نوارکشی + موتیف + پیچ/بافت تریشه یا روش منتخب", c: "prep" },
+    { n: 4, t: "قوام‌آوری اولیه", d: "مشته‌زنی کنترل‌شده پس از نصب قطعات", c: "mash" },
+    { n: 5, t: "تکمیل ساختار", d: "کنترل درزها، پیوستگی و جفت‌کاری", c: "prep" },
+    { n: 6, t: "اعمال رزین زیرکار", d: "چسب چوب + آب با نسبت قطعی ۱ به ۶", c: "resin" },
+    { n: 7, t: "قوام‌آوری نهایی در دونَم", d: "مشته‌زنی آرام در حالت نیمه‌خشک", c: "mash" },
+    { n: 8, t: "خشک‌شدن کامل زیرکار", d: "تثبیت ساختار پیش از رنگ‌آمیزی", c: "dry" },
+    { n: 9, t: "رنگ‌آمیزی و سایه‌روشن", d: "اجرای رنگ طبق دستورالعمل و آزمون نمونه", c: "color" },
+    { n: 10, t: "خشک‌شدن کامل رنگ", d: "تثبیت رنگ پیش از خال‌زنی", c: "dry" },
+    { n: 11, t: "خال‌زنی و تثبیت خمیر طلایی", d: "خمیر دورگیر ویترای؛ خشک‌شدن کامل پیش از پوشش", c: "gold" },
+    { n: 12, t: "روسازی نهایی", d: "پوشش سازگار، یکنواخت و بدون شره", c: "finish" },
   ] as const;
 
   const tone: Record<string, string> = {
@@ -377,17 +376,10 @@ export function DistinctionGrid() {
 
 export function ResinRatios() {
   return (
-    <div className="grid gap-3 sm:grid-cols-2">
-      <div className="rounded-xl border border-brass/40 bg-brass/10 p-4">
-        <p className="text-xs tracking-wide text-muted">رزین زیرکار — مرحله تثبیت</p>
-        <p className="mt-1 font-display text-2xl text-ink">۱ به ۶</p>
-        <p className="mt-1 text-sm text-muted">چسب چوب به آب. پس از تکمیل کامل معرق.</p>
-      </div>
-      <div className="rounded-xl border border-line bg-surface p-4">
-        <p className="text-xs tracking-wide text-muted">نسبت مصوب رزین زیرکار</p>
-        <p className="mt-1 font-display text-2xl text-ink">۱ به ۶</p>
-        <p className="mt-1 text-sm text-muted">یک واحد چسب چوب به شش واحد آب؛ همین نسبت در سراسر محتوای آموزشی ملاک است.</p>
-      </div>
+    <div className="rounded-xl border border-brass/40 bg-brass/10 p-4">
+      <p className="text-xs tracking-wide text-muted">نسبت قطعی رزین زیرکار</p>
+      <p className="mt-1 font-display text-2xl text-ink">۱ به ۶</p>
+      <p className="mt-1 text-sm text-muted">یک واحد چسب چوب به شش واحد آب؛ همین نسبت در تمام بخش‌های آموزش و اجرای رزین زیرکار ملاک است.</p>
     </div>
   );
 }
