@@ -346,7 +346,7 @@ export function AdlChart() {
 export function DistinctionGrid() {
   const rows = [
     ["ماده اصلی", "چرم کفی، زیره و کروپون ضخیم", "ورق بسیار نازک رخ"],
-    ["بستر اجرا", "زیرکارهای متنوع — صنعت ثانویه", "جلد یا تابلو سنتی"],
+    ["بستر اجرا", "زیرکارهای مناسب و پذیرنده چسب", "جلد، جعبه یا تابلو"],
     ["زمان رنگ", "پس از تثبیت کامل ساختار", "همزمان یا پیشین"],
   ];
   return (
@@ -384,9 +384,9 @@ export function ResinRatios() {
         <p className="mt-1 text-sm text-muted">چسب چوب به آب. پس از تکمیل کامل معرق.</p>
       </div>
       <div className="rounded-xl border border-line bg-surface p-4">
-        <p className="text-xs tracking-wide text-muted">غوطه‌وری محلول چسب چوب</p>
-        <p className="mt-1 font-display text-2xl text-ink">۱ به ۵</p>
-        <p className="mt-1 text-sm text-muted">مرحله‌ای جدا؛ با رزین ۱:۶ ادغام نشود.</p>
+        <p className="text-xs tracking-wide text-muted">نسبت مصوب رزین زیرکار</p>
+        <p className="mt-1 font-display text-2xl text-ink">۱ به ۶</p>
+        <p className="mt-1 text-sm text-muted">یک واحد چسب چوب به شش واحد آب؛ همین نسبت در سراسر محتوای آموزشی ملاک است.</p>
       </div>
     </div>
   );
